@@ -1,0 +1,4 @@
+node_modules
+# Make SUPER SURE your actual configs with sensitive values are not committed, per below
+generators/app/config-actual.yml
+generators/cognito/config-actual.yml

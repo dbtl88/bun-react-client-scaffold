@@ -1,0 +1,16 @@
+localApiDomain: localhost/api # (example from provided nginx example config) - domain for the local dev environment, usually like localhost:443 - no trailing /
+testApiDomain: localhost:443 # domain for the test client, used when running Cypress in AWS CodeBuild, as well as locally
+sandboxApiDomain: # e.g. api-sandbox.my-big-idea.com MUST have cert in us-east-1
+prodApiDomain: # e.g. api.my-big-idea.com MUST have cert in us-east-1
+localDomain: localhost # (example from provided nginx example config) - domain for the local dev environment - no trailing /
+testDomain: localhost # domain for the test client, used when running Cypress in AWS CodeBuild, as well as locally
+sandboxDomain: # e.g. sandbox.my-big-idea.com MUST have cert in us-east-1
+prodDomain: # e.g. www.my-big-idea.com MUST have cert in us-east-1
+cognitoDomainLocal: # e.g. https://custom-domain-name.auth.eu-west-2.amazoncognito.com - MUST already exist
+cognitoUserPoolClientIdLocal: # e.g. 3afasfdsafsd32236adfdsaf67
+cognitoDomainSandbox:
+cognitoUserPoolClientIdTest:
+cognitoDomainTest:
+cognitoUserPoolClientIdSandbox:
+cognitoDomainProd:
+cognitoUserPoolClientIdProd:

@@ -1,0 +1,23 @@
+version: 0.2
+        
+phases:
+  pre_build:
+    on-failure: ABORT
+    commands:
+      - codebuild-breakpoint
+      - curl -fsSL https://bun.sh/install | bash
+      - export BUN_INSTALL="$HOME/.bun"
+      - export PATH=$BUN_INSTALL/bin:$PATH
+      - bun install
+  build:
+    on-failure: ABORT
+    commands:
+      - rm -rf dist
+      # NB: hard coded node-env / mode - need to inject somehow
+      - bun run build --mode $NODE_ENV
+artifacts:
+  files:
+    - '**/*'
+  base-directory: 'dist'
+  name: client
+  discard-paths: no

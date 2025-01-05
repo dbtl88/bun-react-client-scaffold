@@ -1,0 +1,18 @@
+{
+  "name": "generator-bun-react",
+  "version": "0.1.0",
+  "files": [
+    "generators"
+  ],
+  "keywords": [
+    "yeoman-generator"
+  ],
+  "author": "Dominic L",
+  "license": "Apache License 2.0",
+  "description": "Yeoman based generator for scaffolding a React/Vite/Bun client Single Page Application, including an AWS CodePipeline via AWS CDK to build the client and push it to two CloudFront distributions, with custom domains, which are also created by the generator using AWS CDK",
+  "dependencies": {
+    "yeoman-generator": "^7.3.3",
+    "js-yaml": "^4.1.0"
+  },
+  "type": "module"
+}
