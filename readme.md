@@ -36,8 +36,8 @@ I provide no guarantees for this project. It's just supposed to be a demonstrati
 
 1. Make sure that DNS records DO NOT EXIST for the sandbox and prod domains you provided in your config.
 2. Copy this repo somewhere. Then enter the main source folder, and type `npm install`, then once this is done, `npm link`.
-3. Navigate to another folder, where you want to scaffold your app. Run `yo bun-react`. You will need to provide the filename of the config file you prepared. Note that the generator will create a folder 'appname' per your provided app name in the your config file, and sub-folders 'appname-client' and 'appname-pipeline-client', so you don't need to create an app folder first, you should start from the desired parent folder.
-4. To add cognito (including user table on database) cognito, run `yo bun-react:cognito` _from the generated 'appname-client' directory_. DO NOT run it from any of the parent directories.
+3. Navigate to another folder, where you want to scaffold your app. Run `yo bun-react-client`. You will need to provide the filename of the config file you prepared. Note that the generator will create a folder 'appname' per your provided app name in the your config file, and sub-folders 'appname-client' and 'appname-pipeline-client', so you don't need to create an app folder first, you should start from the desired parent folder.
+4. To add cognito (including user table on database) cognito, run `yo bun-react-client:cognito` _from the generated 'appname-client' directory_. DO NOT run it from any of the parent directories.
 5. Once the main generator has run, you will be provided, as part of the console output, with the cloudfront distribution URLs for your sandbox and prod clients. Before you can use the custom domains you provided, you will need to create corresponding CNAME records. NOTE: If you are using a service like Cloudflare, this will not work out of the box if you proxy the requests - you're on your own for this. If you just have plain DNS-only records setup, this will work out of the box. Note also that CloudFront WAF is not set up on these distributions, you'll need to do this yourself.
 
 ## Commands to run the app

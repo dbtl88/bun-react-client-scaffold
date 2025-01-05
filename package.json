@@ -1,5 +1,5 @@
 {
-  "name": "generator-bun-react",
+  "name": "generator-bun-react-client",
   "version": "0.1.0",
   "files": [
     "generators"

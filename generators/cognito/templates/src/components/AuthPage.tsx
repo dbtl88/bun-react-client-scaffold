@@ -23,7 +23,7 @@ export default function AuthPage() {
       setSearchParams(searchParams);
     }
     callAuthenticatedRoute();
-  }, [code, login]);
+  }, [code]);
 
   // NB: Separate useEffect hook for updating these bits of local state, as otherwise there is nothing to trigger the re-render, as putting these in the other useEffect would capture the old userInfo value, at the point it gets invoked. The new value would be available here through AuthContext, but a re-render doesn't get triggered, because it's not consumed anywhere in the return statement.
 
