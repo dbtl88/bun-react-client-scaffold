@@ -1,4 +1,4 @@
-# Bun-ElysiaJS server app scaffold, including AWS Cognito scaffolding
+# Bun-React-CDK client app scaffold, including AWS Cognito scaffolding
 
 ## What is this project?
 
