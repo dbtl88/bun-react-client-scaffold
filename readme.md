@@ -28,7 +28,7 @@ I provide no guarantees for this project. It's just supposed to be a demonstrati
 2. Ensure CDK is installed, authenticated, and bootstrapped on your local machine. You can find instructions direct from Amazon.
 3. Ensure github cli is installed authenticated on your local machine. You can find instructions direct from GitHub.
 4. You must have a github token, with appropriate fine grained permissions, stored in AWS SecretManager, under the name "github-token", of type "Key/Value Pair", with the key "token" corresponding to the token value (which should look like 'gh_randomstring').
-5. Populate your config file. You'll need to provide server API URLs, but you can leave these blank and fill them in later if needed. Gitignore will ignore and not commit config-actual.yml, so perhaps use this as your config file name.
+5. Populate your config files. One is in /generators/app/, the other is in /generators/cognito/. You'll need to provide server API URLs, but you can leave these blank and fill them in later if needed. Gitignore will ignore and not commit config-actual.yml, so perhaps use this as your config file name.
 6. If you are going to use the 'cognito' generator, you will need to have an existing AWS Cognito User Pool set up, with a User Pool Client set up. The User Pool Client MUST have redirect and logout URIs set up, pointing to 'sandboxDomain/login' and 'prodDomain/login' for both redirect and logout. You can of course modify this app appropriately (and if you used the corresponding server generator, that too) to use your own URI routes.
 7. To have node package manager (npm) installed on your local machine.
 
