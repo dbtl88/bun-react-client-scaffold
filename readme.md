@@ -6,7 +6,7 @@ This is a tool I needed for my personal development needs. It's really hard to g
 
 This is my attempt to create a tool to scaffold this setup - to get me to the point where I can start writing meaningful code - that matches some of my very eclectic preferences for which frameworks and runtimes and cloud platforms and deployment approaches and auth strategy I want to use. I make no guarantees that any of these are sensible, or suggestions that you should follow them too, or that they're perfectly implemented (or even well implemented), so use any of this with great caution.
 
-This is the client generator, and there is a complementary server generator called bun-elysia-server-public. Here's what the client generator does:
+This is the client generator, and there is a complementary server generator called bun-elysia-server-scaffold. Here's what the client generator does:
 
 - Copies code for, then deploys, an AWS CDK app that has (1) a CodePipeline to build and deploy the client app to two environments, 'sandbox' and 'production', with a manual approval step between them; (2) a CloudFront distribution, with a custom domain, and an S3 origin (the bucket also gets created), into which the client app artifacts are placed.
 - Copies code for the client, which is based on React and built using Vite.
