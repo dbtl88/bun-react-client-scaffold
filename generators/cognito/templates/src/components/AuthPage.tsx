@@ -6,6 +6,8 @@ import { cognitoLoginUrl } from "../utility/general";
 import LogoutButton from "./utility/LogoutButton";
 import { useAuth } from "../data/useAuth";
 
+// CRITICAL NOTE: Per IETF RFC 6794 on OAUTH 2.0 section 3.1.2.5, this page MUST NOT include any third party scripts, analytics, networks, etc., or first remove the redirect URI from the OAuth server which contains the authorisation code returned from the /oauth2/authorize endpoint.
+
 export default function AuthPage() {
   const [loggedIn, setLoggedIn] = useState<Boolean>(false);
   const { userInfo, login } = useAuth();
