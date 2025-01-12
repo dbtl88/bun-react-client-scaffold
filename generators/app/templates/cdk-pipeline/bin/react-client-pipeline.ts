@@ -11,6 +11,8 @@ const uiStackSandbox = new UiDeploymentStack(
   {
     domains: ["<%=sandboxDomain%>"],
     cloudfrontCertificateArn: "<%=certificateArn%>",
+    serverDomain: "<%=sandboxApiForCloudFront%>",
+    serverPathPattern: "/api*",
   }
 );
 const uiStackProd = new UiDeploymentStack(
@@ -20,6 +22,8 @@ const uiStackProd = new UiDeploymentStack(
   {
     domains: ["<%=prodDomain%>"],
     cloudfrontCertificateArn: "<%=certificateArn%>",
+    serverDomain: "<%prodApiForCloudFront%>",
+    serverPathPattern: "/api*",
   }
 );
 new PipelineStack(app, `${name}pipeline-stack`, name, {

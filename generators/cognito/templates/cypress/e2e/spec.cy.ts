@@ -1,7 +1,9 @@
 const cognitoUrl = Cypress.env("VITE_COGNITO_URL");
 const cognitoClientId = Cypress.env("VITE_COGNITO_CLIENT_ID");
-const cognitoRedirectUri = Cypress.env("VITE_COGNITO_REDIRECT_URI");
-const cognitoLoginUrl = `${cognitoUrl}/login?client_id=${cognitoClientId}&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile&redirect_uri=${cognitoRedirectUri}`;
+const cognitoRedirectUri = decodeURIComponent(
+  Cypress.env("VITE_COGNITO_REDIRECT_URI")
+);
+const cognitoLoginUrl = `${cognitoUrl}/login?client_id=${cognitoClientId}&redirect_uri=${cognitoRedirectUri}&response_type=code&scope=aws.cognito.signin.user.admin+email+openid+phone+profile`;
 
 Cypress.env("cognitoUrl", cognitoUrl);
 Cypress.env("cognitoLoginUrl", cognitoLoginUrl);

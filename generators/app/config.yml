@@ -5,6 +5,8 @@ localApiDomain: localhost/api # (example from provided nginx example config) - d
 testApiDomain: localhost:443 # domain for the test client, used when running Cypress in AWS CodeBuild, as well as locally
 sandboxApiDomain: # e.g. api-sandbox.my-big-idea.com MUST have cert in us-east-1
 prodApiDomain: # e.g. api.my-big-idea.com MUST have cert in us-east-1
+sandboxApiForCloudFront: # e.g. Origin for cloudFront to proxy API
+prodApiForCloudFront: # Origin for cloudFront to proxy API
 sandboxDomain: # e.g. sandbox.my-big-idea.com MUST have cert in us-east-1
 prodDomain: # e.g. www.my-big-idea.com MUST have cert in us-east-1
 certificateArn: # e.g. arn:aws:acm:us-east-1:12345678912:certificate/uuid - AWS certificate manager cert for both sandbox and prod domains - MUST be in region us-east-1
