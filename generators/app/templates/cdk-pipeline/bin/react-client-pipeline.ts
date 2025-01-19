@@ -22,7 +22,7 @@ const uiStackProd = new UiDeploymentStack(
   {
     domains: ["<%=prodDomain%>"],
     cloudfrontCertificateArn: "<%=certificateArn%>",
-    serverDomain: "<%prodApiForCloudFront%>",
+    serverDomain: "<%=prodApiForCloudFront%>",
     serverPathPattern: "/api*",
   }
 );
